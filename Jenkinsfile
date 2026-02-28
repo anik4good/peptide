@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/anik4good/peptide.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
