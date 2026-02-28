@@ -15,6 +15,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN mkdir -p public data
 
 # Build Next.js application
 RUN npm run build
